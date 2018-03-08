@@ -1,0 +1,16 @@
+---
+- hosts: "{{ hst_tag }}"
+
+  tasks:
+#  - name: Purge and Backup old package
+  - name: Create deploy dir
+    when: packageToUntar
+#    shell: rm -rf {{ deployPath }}.old; mv -f {{ deployPath }} {{ deployPath }}.old; mkdir -p {{ deployPath }}
+    shell: mkdir -p {{ deployPath }}
+
+  - name: Retrieve and Untar new package
+    when: packageToUntar
+    unarchive:
+      src: /net/vmdevcfmrel/local5/packages/{{ release }}.tar.gz
+      dest: "{{ deployPath }}"
+      remote_src: yes

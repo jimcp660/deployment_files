@@ -1,0 +1,24 @@
+---
+- hosts: "{{ hst_tag }}"
+  gather_facts: False
+
+  tasks:
+  - name: Run command {{ cmd }} for {{ hst_tag }}
+    shell: echo USER:${USER} HOST:$(hostname) ; . ~/.profile > /dev/null; {{ cmd }}
+    args:
+      executable: /bin/ksh
+      creates: /tmp/jins.{{ id }}
+    register: res
+    no_log: True
+    ignore_errors: True
+
+  - name: Display command stdout
+    debug: var=res.stdout_lines
+
+  - name: Display command stderr
+    debug: var=res.stderr_lines
+    when: "res.rc != 0"
+    failed_when: "res.rc != 0"
+
+  - name: Touch status step file when not failed
+    file: path=/tmp/jins.{{ id }} state=touch
