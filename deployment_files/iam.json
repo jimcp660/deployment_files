@@ -50,7 +50,7 @@
     },
     { "Id": 30,
       "name": "Backup Domain",
-      "command": "echo Backup_Domain",
+      "command": "crash ... echo Backup_Domain",
       "host": "IAM_AS_BIN",
       "app_list":
          [ {"app":"EAPINSTALLABLE_IAM"}
