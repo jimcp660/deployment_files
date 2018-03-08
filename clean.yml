@@ -1,0 +1,19 @@
+---
+- hosts: "{{ hst_tag }}"
+  gather_facts: False
+
+  tasks:
+  - name: List file to delete
+    find:
+      paths: /tmp/
+      patterns: jins.*{{ id }}
+    when: cleanStart
+    register: files_to_delete
+
+  - name: Clean status file for cleanStart
+    file:
+      path: "{{ item.path }}"
+      state: absent
+    with_items: "{{ files_to_delete.files }}"
+    no_log: True
+    ignore_errors: True
