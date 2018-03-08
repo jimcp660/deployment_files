@@ -1,0 +1,120 @@
+###############################################################
+# OSCAR / POSE
+###############################################################
+[OSCAR_AS_BIN:vars]
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+
+[OSCAR_AS_BIN]
+OSCAR_AS_BIN_1 ansible_host=localhost ansible_user=oscarmgr
+OSCAR_AS_BIN_2 ansible_host=localhost ansible_user=oscarmgr
+
+###############################################################
+# ORIGAMI / BRC
+###############################################################
+[ORIGAMI_AS_BIN:vars]
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+
+[ORIGAMI_AS_BIN]
+ORIGAMI_AS_BIN_1 ansible_host=localhost ansible_user=origamimgr
+ORIGAMI_AS_BIN_2 ansible_host=localhost ansible_user=origamimgr
+
+###############################################################
+# OASIS / OREDA / OCTAVIA
+###############################################################
+[OASIS_AS_BIN:vars]
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+
+[OASIS_AS_BIN]
+OASIS_AS_BIN_1 ansible_host=localhost ansible_user=oasismgr
+OASIS_AS_BIN_2 ansible_host=localhost ansible_user=oasismgr
+
+###############################################################
+# IAM / SEC
+###############################################################
+[IAM_AS_BIN:vars]
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+
+[IAM_AS_BIN]
+IAM_AS_BIN_1 ansible_host=localhost ansible_user=iammgr
+IAM_AS_BIN_2 ansible_host=localhost ansible_user=iammgr
+
+###############################################################
+# CMAX
+###############################################################
+[CMAX_AS_CORE_BIN:vars]
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+
+[CMAX_AS_CORE_BIN]
+CMAX_AS_CORE_BIN_1 ansible_host=cmaxas ansible_user=wcmaxmgr
+
+###############################################################
+# PORTAL_BACKEND
+###############################################################
+[PORTAL_AS_BIN:vars]
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+
+[PORTAL_AS_BIN]
+PORTAL_AS_BIN_1 ansible_host=localhost ansible_user=portalmgr
+PORTAL_AS_BIN_2 ansible_host=localhost ansible_user=portalmgr
+
+###############################################################
+# PORTAL_FRONT
+###############################################################
+[PORTAL_CB_BIN:vars]
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+
+[PORTAL_CB_BIN]
+PORTAL_CB_BIN_1 ansible_host=localhost ansible_user=portalmgr
+PORTAL_CB_BIN_2 ansible_host=localhost ansible_user=portalmgr
+PORTAL_CB_BIN_3 ansible_host=localhost ansible_user=portalmgr
+PORTAL_CB_BIN_4 ansible_host=localhost ansible_user=portalmgr
+
+###############################################################
+# PORTAL_ASX
+###############################################################
+[PORTAL_ASX_BIN:vars]
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+
+[PORTAL_ASX_BIN]
+PORTAL_ASX_BIN_1 ansible_host=localhost ansible_user=portalmgr
+PORTAL_ASX_BIN_2 ansible_host=localhost ansible_user=portalmgr
+
+###############################################################
+# PORTAL_CETIP
+###############################################################
+[PORTAL_CETIP_BIN:vars]
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+
+[PORTAL_CETIP_BIN]
+PORTAL_CETIP_BIN_1 ansible_host=localhost ansible_user=portalmgr
+PORTAL_CETIP_BIN_2 ansible_host=localhost ansible_user=portalmgr
+
+###############################################################
+# PORTAL_IBC
+###############################################################
+[PORTAL_IBC_BIN:vars]
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+
+[PORTAL_IBC_BIN]
+PORTAL_IBC_BIN_1 ansible_host=localhost ansible_user=portalmgr
+PORTAL_IBC_BIN_2 ansible_host=localhost ansible_user=portalmgr
+
+###############################################################
+# PORTAL_STRATE
+###############################################################
+[PORTAL_STRATE_BIN:vars]
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+
+[PORTAL_STRATE_BIN]
+PORTAL_STRATE_BIN_1 ansible_host=localhost ansible_user=portalmgr
+PORTAL_STRATE_BIN_2 ansible_host=localhost ansible_user=portalmgr
+
+###############################################################
+# PORTAL_OPENAM
+###############################################################
+[PORTAL_OPENAM_BIN:vars]
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+
+[PORTAL_OPENAM_BIN]
+PORTAL_OPENAM_BIN_1 ansible_host=localhost ansible_user=openammgr
+PORTAL_OPENAM_BIN_2 ansible_host=localhost ansible_user=openammgr
