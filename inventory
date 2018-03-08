@@ -35,8 +35,8 @@ OASIS_AS_BIN_2 ansible_host=localhost ansible_user=oasismgr
 ansible_ssh_common_args='-o StrictHostKeyChecking=no'
 
 [IAM_AS_BIN]
-IAM_AS_BIN_1 ansible_host=localhost ansible_user=iammgr
-IAM_AS_BIN_2 ansible_host=localhost ansible_user=iammgr
+IAM_AS_BIN_1 ansible_host=localhost
+IAM_AS_BIN_2 ansible_host=localhost
 
 ###############################################################
 # CMAX
